@@ -1,0 +1,50 @@
+<web-app>
+    <!-- Servlet mappings for existing servlets -->
+    <servlet>
+        <servlet-name>TimeServlet</servlet-name>
+        <servlet-class>TimeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FetchBookServlet</servlet-name>
+        <servlet-class>FetchBookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TimeServlet</servlet-name>
+        <url-pattern>/TimeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FetchBookServlet</servlet-name>
+        <url-pattern>/FetchBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet mappings for new servlet and filter -->
+    <servlet>
+        <servlet-name>DatabaseAccessServlet</servlet-name>
+        <servlet-class>DatabaseAccessServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DatabaseAccessServlet</servlet-name>
+        <url-pattern>/DatabaseAccessServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter mapping for SecurityCheckFilter -->
+    <filter>
+        <filter-name>SecurityCheckFilter</filter-name>
+        <filter-class>SecurityCheckFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SecurityCheckFilter</filter-name>
+        <url-pattern>/DatabaseAccessServlet</url-pattern>
+    </filter-mapping>
+</web-app>

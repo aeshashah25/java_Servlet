@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <h1 style="font-family: cursive;">LOGIN HERE</h1>
+            <form name="f1" method="get" action="DatabaseAccessServlet">
+                UserName : <input type="text" name="username" placeholder="Enter Username">
+                <br><br><br>
+                Password : <input type="text" name="password" placeholder="Enter Password">
+                <br><br><br>
+                <input type="submit" name="sub" value="Login" class="input1">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" name="can" value="Cancel" class="input1">
+            </form>
+            <h2>Login Form</h2>
+            <form action="LoginServlet" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+</body>
+</html>
